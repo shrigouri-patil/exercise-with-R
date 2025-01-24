@@ -6,7 +6,7 @@ data_dir = "Raw_Data"
 output_dir = "Processed_Data"
 
 # Get a list of all data files in the directory (for all txt files from data_dir folder)
-data_files = list.files(data_dir, pattern = "\\.txt$", full.names = TRUE)
+data_files = list.files(data_dir, pattern = ".txt$", full.names = TRUE)
 
 # Create a function to process a single file
 process_file = function(file_path) {
@@ -68,7 +68,7 @@ process_file = function(file_path) {
   
   # To remove colmns found in cols_to_remove
   filtered_data = halfanhour_data[, !(colnames(halfanhour_data)               #!negates and %n% looks if the halfanhour_data has columns from columns_to rmove
-                                       %in% recording_cols[columns_to_remove])]
+                                       %in% activity_cols_1[cols_to_remove])]
   
   # Extract time from the interval
   filtered_data$Time = format(filtered_data$Interval, "%H:%M:%S")
@@ -130,7 +130,7 @@ for (file in data_files) {                  # files selected using data_files wi
 
 
 # Save the consolidated results to a single CSV file
-output_file = paste0(output_dir, "consolidated_results.csv")
+output_file = file.path(output_dir, "consolidated_results.csv")
 write.csv(consolidated_results, file = output_file, row.names = FALSE)
 
 # Print a message
