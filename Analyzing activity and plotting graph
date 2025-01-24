@@ -1,9 +1,9 @@
 library(tidyverse)
 
 # Set the directory containing the data files
-data_dir = "D:\\Gouri\\R-course\\project\\DAM raw data\\"
+data_dir = "D:\\Gouri\\R-course\\project\\DAM raw data\\"      # directory in which raw data is available
 
-output_dir = "D:\\Gouri\\R-course\\project\\Processed Data\\"
+output_dir = "D:\\Gouri\\R-course\\project\\Processed Data\\"  # directory in which raw data is saved
 
 # Get a list of all data files in the directory (for all txt files from data_dir folder)
 data_files = list.files(data_dir, pattern = "\\.txt$", full.names = TRUE)
