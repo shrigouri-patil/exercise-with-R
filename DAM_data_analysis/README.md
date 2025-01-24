@@ -30,4 +30,6 @@ Plot a graph comparing the average circadian rhythms of all conditions.
 This program can be adapted to any number of conditions by simply changing the directory in the code, enabling quick and efficient analysis of circadian rhythms under different experimental setups.
 
 
+This is the final visualization of the data, processed by the script:
+![image](https://github.com/user-attachments/assets/cbe5298e-1bd3-4623-959e-a769ca9ed47d)
 
